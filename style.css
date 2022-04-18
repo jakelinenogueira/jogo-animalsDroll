@@ -1,0 +1,245 @@
+:root {
+  --blue-color: #166665;
+  --green-color: #d2d819;
+  --background-color: #d3d4d3;
+  --light-brown-color: #b34212;
+  --beige-color: #95d430;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Tomorrow';
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+body a {
+  text-decoration: none;
+}
+
+.header-components {
+  width: 100vw;
+  height: 100px;
+  padding: 0 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.brand p {
+  font-family: 'Black Ops One';
+  font-size: 30px;
+  color:var(--blue-color);
+  line-height: 23px;
+}
+
+.brand span {
+  font-family: 'Black Ops One';
+  font-size: 24px;
+  color:var(--blue-color);
+}
+
+.brand i {
+  font-size: 20px;
+  color: var(--beige-color);
+}
+
+.brand p:hover {
+  color: var(--beige-color);
+}
+
+.login i {
+  font-size: 40px;
+  color: var(--beige-color);
+}
+
+.dropdown-content {
+  display: none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content p {
+  color: #ffff;
+  font-size: 20px;
+  padding: 5px 0;
+}
+
+.main-components {
+  width: 100vw;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly ;
+}
+
+.buttons {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.buttons button {
+  width: 100px;
+  height: 110px;
+  border-style: none;
+  font-family: 'Tomorrow';
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #fff;
+  background-color: var(--light-brown-color);
+  border-radius: 30px;
+  margin: 10px;
+}
+
+.buttons button:hover {
+  color: var(--beige-color);
+}
+
+.animals {
+  height: 250px;
+  width: 50%;
+  color: var(--green-color);
+  border: 7px solid var(--light-brown-color);
+  background-color: var(--blue-color) !important;
+}
+
+
+.frog {
+  height: 240px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.cat {
+  display: none;
+  height: 240px;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.frog i, .cat i {
+  padding-left: 10px;
+}
+
+.animal1  {
+  font-size: 5.5em;
+  align-self: end;
+  padding-bottom: 0;
+}
+
+.animal2 {
+  font-size: 4.5em;
+  align-self: end;
+}
+
+.animal3 {
+  font-size: 3.5em; 
+  align-self: end;
+}
+
+.fa-seedling {
+  color: #07611a;
+  font-size: 6rem;
+}
+
+.message {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text1-message {
+  font-size: 21px;
+  font-weight: 600;
+  color: #07611a;
+  text-transform: uppercase;
+  width: 310px;
+  animation: digitando 3s steps(25), blink .4s infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px dotted;
+}
+
+.text2-message {
+  font-size: 21px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #07611a;
+  width: 180px;
+  animation: digitando 4s steps(20), blink .4s infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px dotted;
+}
+
+@keyframes digitando {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  100% {
+    border-color: var(--light-brown-color);
+  }
+}
+
+footer {
+  background-image: url(./assets/plantar.png);
+  background-repeat: repeat-x;
+  background-size: contain;
+  height: 120px;
+  bottom: 0;
+  width: 100vw;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  text-align: right;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+footer p {
+  padding-top: 100px;
+}
+
+@media (max-width: 767px ) {
+    .main-components {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column-reverse;
+    
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    .animals {
+      width: 80%;
+    }
+
+    .animal2 {
+      font-size: 6.5em;
+    }
+
+    .animal1 {
+      display: none;
+    }
+
+    .message {
+      height: 100px;
+    }
+}
